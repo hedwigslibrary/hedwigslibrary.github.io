@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://use.typekit.net/vqp3irn.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+<div class="login-container">
+    <div class="header">
+        <h2>Login</h2>
+        <i class='bx bxs-magic-wand' ></i>
+    </div>
+    <form id="login-form" action="blank.html" method="POST">
+        <div class="input-group">
+            <input type="text" placeholder= "Username" id="username" name="username" required>
+            <i class='bx bxs-user'></i>
+        </div>
+        <div class="input-group">
+            <input type="password" placeholder= "Password" id="password" name="password" required>
+            <i class='bx bxs-lock-alt' ></i>
+        </div>
+        <div class="remember-forgot">
+            <label><input type="checkbox">Remember me</label>
+            <a href="#">Forgot password?</a>
+        </div>
+        <button type="submit" class="btn">Login</button>
+
+        <div class="register-link">
+            <p>Don't have an account? <a href="#">Register</a></p>
+        </div>
+
+
+        <audio id="bg-music" src="bg-music.mp3" autoplay loop></audio>
+        <div class="music-controls">
+            <button onclick="toggleMusic()">Toggle Music</button>
+            <input type="range" min="0" max="1" step="0.1" value="1" onchange="changeVolume(this.value)">
+        </div>
+
+        <script>
+            // Function to toggle the background music playback
+            function toggleMusic() {
+                var music = document.getElementById('bg-music');
+                if (music.paused) {
+                    music.play();
+                } else {
+                    music.pause();
+                }
+            }
+
+            // Function to change the volume of the background music
+            function changeVolume(volume) {
+                var music = document.getElementById('bg-music');
+                music.volume = volume;
+            }
+        </script>
+
+    </form>
+</div>
+<div class="chat-icon" id="chat-icon">
+    <img id = 'image' src="chat-icon.png">
+    <div id="chat-box" class="chat-box">
+        <textarea id="message" placeholder="🔮 Welcome to the magical world of Hedwig's Catalog! 🔮
+
+Here's a brief overview of the enchanting components of our magical system:
+
+📜 Spellbinding APIs: Our suite of APIs serves as the hidden passageways connecting the front end to the mystical database. They handle tasks like searching for artifacts, checking availability, reserving items, and suggesting related magical materials.
+
+📚 Enchanted Database: Crafted with magic, our database not only stores information but also organizes, retrieves, and secures the library's sacred knowledge efficiently.
+
+What can I help you with?
+"></textarea>
+        <button id="send-btn">Send</button>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
+
+
